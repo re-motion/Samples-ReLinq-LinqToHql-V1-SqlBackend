@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+                  assembly="PhoneBook.Domain"
+                  namespace="PhoneBook.Domain">
+
+  <class name="Location" lazy="false">
+    
+    <id name="NHibernateId" unsaved-value="00000000-0000-0000-0000-000000000000">
+      <generator class="guid" />
+    </id>
+
+    <property name="Street" />
+    <property name="No" />
+    <property name="City" />
+    <property name="Country" />
+    <property name="ZipCode" />
+
+  </class>
+
+
+  <class name="PhoneNumber" lazy="false">
+
+    <id name="NHibernateId" unsaved-value="00000000-0000-0000-0000-000000000000">
+      <generator class="guid" />
+    </id>
+
+    <property name="CountryCode" length="6"/>
+    <property name="AreaCode" length="8"/>
+    <property name="Number" length="10"/>
+    <property name="Extension" length="7"/>
+
+    <!-- n:1 bidirectional  -->
+    <many-to-one
+    name="Person"
+    lazy="false"
+    class="PhoneBook.Domain.Person, PhoneBook.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+    not-null="true" />
+  </class>
+
+
+  <class name="Person" lazy="false">
+
+    <id name="NHibernateId" unsaved-value="00000000-0000-0000-0000-000000000000">
+      <generator class="guid" />
+    </id>
+
+    <property name="FirstName" length="30" />
+    <property name="Surname" length="30" />
+
+    <!-- 1:1 undirectional (according to suggestion in NH-in-Action book mapped as 1:n with unique="true" constraint) -->
+    <many-to-one name="Location"
+    class="Location"
+    cascade="all"
+    unique="false"/>
+
+    <!-- 1:n bidirectional  -->
+    <!--<set
+    name="PhoneNumbers"
+    lazy="true"
+    inverse="true"
+    cascade="save-update">
+      <key/>
+      <one-to-many class="PhoneNumber"/>
+    </set>-->
+
+    <!-- TODO: Map SortExpression = "CountryCode, AreaCode, Number, Extension" -->
+    <!--
+    Map ObjectList correctly:
+        access="NHibernate.DataBinding.BindingAccessor+CamelCase, NHibernate.DataBinding"    
+        access="NHibernate.DataBinding.BindingAccessor, NHibernate.DataBinding"
+        collection-type="MonNameSpace.MaListe`1[[MonNameSpace.clsAdresse, MonAssembly]],MonAssembly"
+        collection-type="Remotion.Data.DomainObjects.ObjectList`1[[PhoneBook.Domain.PhoneNumber, PhoneBook.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Remotion.Data.DomainObjects, Version=1.11.19.2, Culture=neutral, PublicKeyToken=fee00910d6e5f53b" 
+     collection-type="PhoneBook.Domain.NHibernateSpecific.NHibernateObjectList`1[[PhoneBook.Domain.PhoneNumber, PhoneBook.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], PhoneBook.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" 
+    -->
+    <list
+    name="PhoneNumbers"
+    collection-type="PhoneBook.Domain.NHibernateSpecific.NHibernateObjectList`1[[PhoneBook.Domain.PhoneNumber, PhoneBook.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], PhoneBook.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" 
+    generic="true" 
+    lazy="false"
+    cascade="save-update">
+      <key/>
+      <index/>
+      <one-to-many class="PhoneNumber"/>
+    </list>
+
+  </class>
+
+
+
+  
+  
+<!--
+  [StringProperty(MaximumLength = 30)]
+  public virtual string FirstName { get; set; }
+
+  [StringProperty(MaximumLength = 30)]
+  public virtual string Surname { get; set; }
+
+  public virtual Location Location { get; set; }
+
+  [DBBidirectionalRelation("Person", SortExpression = "CountryCode, AreaCode, Number, Extension")]
+  public virtual ObjectList<PhoneNumber> PhoneNumbers { get; set; }
+-->
+  
+  
+  
+<!--
+    [StringProperty(MaximumLength = 6)]
+    public virtual string CountryCode { get; set; }
+
+    [StringProperty(MaximumLength = 8)]
+    public virtual string AreaCode { get; set; }
+
+    [StringProperty(MaximumLength = 10)]
+    public virtual string Number { get; set; }
+
+    [StringProperty(MaximumLength = 7)]
+    public virtual string Extension { get; set; }
+
+    [DBBidirectionalRelation("PhoneNumbers")]
+    public virtual Person Person { get; set; }
+-->  
+  
+</hibernate-mapping>
+
+
+

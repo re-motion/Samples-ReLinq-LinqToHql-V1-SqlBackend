@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?><doc><assembly>
+        <name>Remotion.Data.Linq</name>
+    </assembly><members><member name="T:Remotion.Data.Linq.IDatabaseInfo"><summary>
+            The interface has to be implemented so that the linq provider can use the underlying system to get information about the data source.
+            </summary></member><member name="T:Remotion.Data.Linq.QueryProviderBase"><summary>
+            The class implements <see cref="T:System.Linq.IQueryProvider" /> to create and execute queries against a datasource.
+            </summary></member><member name="T:Remotion.Data.Linq.Parsing.Details.WhereConditionParsing.IWhereConditionParser"><summary>
+            
+            </summary></member><member name="T:Remotion.Data.Linq.Parsing.FieldResolving.ClauseFieldResolverVisitor"><summary>
+            identifies the parameter and members used by an expression of a field access
+            </summary></member><member name="T:Remotion.Data.Linq.Parsing.FieldResolving.QueryModelFieldResolverVisitor"><summary>
+            removes transparent identifier from a expression representing a field access
+            </summary></member><member name="T:Remotion.Data.Linq.SqlGeneration.IMethodCallSqlGenerator"><summary>
+            This interface has to be implemented, when a new MethodCallGenerator is generated. This generator has to handle method calls which are not
+            supported as default by the framework. This generator has to be registered to <see cref="T:Remotion.Data.Linq.SqlGeneration.MethodCallSqlGeneratorRegistry" />.
+            </summary></member><member name="M:Remotion.Data.Linq.SqlGeneration.IMethodCallSqlGenerator.GenerateSql(Remotion.Data.Linq.DataObjectModel.MethodCall,Remotion.Data.Linq.SqlGeneration.ICommandBuilder)"><summary>
+            The method has to contain the logic for generating sql code for the method call. 
+            </summary><param name="methodCall"><see cref="T:Remotion.Data.Linq.DataObjectModel.MethodCall" /></param><param name="commandBuilder"><see cref="T:Remotion.Data.Linq.SqlGeneration.ICommandBuilder" /></param></member><member name="T:Remotion.Data.Linq.SqlGeneration.ICommandBuilder"><summary>
+            This interface has to be implemented for each sql code generation mechanism. It holds the information to generate the sql query.
+            </summary></member></members></doc>
