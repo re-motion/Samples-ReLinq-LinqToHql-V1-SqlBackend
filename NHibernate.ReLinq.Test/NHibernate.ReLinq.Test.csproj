@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.21022</ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{E4CDEA16-2D70-4C03-9C39-C1B8F0C2A43C}</ProjectGuid>
     <OutputType>Library</OutputType>
@@ -62,10 +62,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\NHibernate.ReLinq\lib\Iesi.Collections.dll</HintPath>
     </Reference>
-    <Reference Include="Iesi.Collections.Test, Version=1.0.1.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\NHibernate.ReLinq\lib\Iesi.Collections.Test.dll</HintPath>
-    </Reference>
     <Reference Include="LinFu.DynamicProxy, Version=1.0.3234.27710, Culture=neutral, PublicKeyToken=62a6874124340d6e, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\NHibernate.ReLinq\lib\LinFu.DynamicProxy.dll</HintPath>
@@ -82,40 +78,20 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\NHibernate.ReLinq\lib\NHibernate.ByteCode.Castle.dll</HintPath>
     </Reference>
-    <Reference Include="NHibernate.ByteCode.Castle.Tests, Version=1.0.0.1, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\NHibernate.ReLinq\lib\NHibernate.ByteCode.Castle.Tests.dll</HintPath>
-    </Reference>
     <Reference Include="NHibernate.ByteCode.LinFu, Version=2.1.0.1001, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\NHibernate.ReLinq\lib\NHibernate.ByteCode.LinFu.dll</HintPath>
     </Reference>
-    <Reference Include="NHibernate.ByteCode.LinFu.Tests, Version=1.0.0.1, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\NHibernate.ReLinq\lib\NHibernate.ByteCode.LinFu.Tests.dll</HintPath>
-    </Reference>
     <Reference Include="NHibernate.DomainModel, Version=2.1.0.1001, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\NHibernate.ReLinq\lib\NHibernate.DomainModel.dll</HintPath>
-    </Reference>
-    <Reference Include="NHibernate.Examples, Version=0.0.5000.6, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\NHibernate.ReLinq\lib\NHibernate.Examples.dll</HintPath>
-    </Reference>
-    <Reference Include="NHibernate.Test, Version=2.1.0.1001, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\NHibernate.ReLinq\lib\NHibernate.Test.dll</HintPath>
-    </Reference>
-    <Reference Include="NHibernate.Test.Performance, Version=2.1.0.1001, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\NHibernate.ReLinq\lib\NHibernate.Test.Performance.dll</HintPath>
     </Reference>
     <Reference Include="NHibernate.Tool.HbmXsd, Version=2.1.0.1001, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <ExecutableExtension>.exe</ExecutableExtension>
       <HintPath>..\NHibernate.ReLinq\lib\NHibernate.Tool.HbmXsd.exe</HintPath>
     </Reference>
-    <Reference Include="nunit.core, Version=2.4.8.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+    <Reference Include="nunit.core, Version=2.4.7.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\NHibernate.ReLinq\lib\nunit.core.dll</HintPath>
     </Reference>
@@ -123,7 +99,7 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\NHibernate.ReLinq\lib\nunit.core.interfaces.dll</HintPath>
     </Reference>
-    <Reference Include="nunit.framework, Version=2.4.8.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+    <Reference Include="nunit.framework, Version=2.4.7.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\NHibernate.ReLinq\lib\nunit.framework.dll</HintPath>
     </Reference>
