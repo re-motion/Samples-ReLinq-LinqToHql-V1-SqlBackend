@@ -179,8 +179,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="License\lgpl.txt" />
-    <Content Include="License\LicenseHeader\LicenseHeader.txt" />
     <Content Include="License\readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\LGPL.licenseheader">
+      <Link>LGPL.licenseheader</Link>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
