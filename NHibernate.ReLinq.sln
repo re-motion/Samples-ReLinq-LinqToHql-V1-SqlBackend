@@ -1,6 +1,8 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NHibernate.ReLinq", "NHibernate.ReLinq\NHibernate.ReLinq.csproj", "{4D55C53C-6C3C-4E18-ACAC-7E5DF558A1BA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NHibernate.ReLinq.Test", "NHibernate.ReLinq.Test\NHibernate.ReLinq.Test.csproj", "{E4CDEA16-2D70-4C03-9C39-C1B8F0C2A43C}"
